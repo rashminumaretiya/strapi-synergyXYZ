@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_home_home_cards",
+  "info": {
+    "displayName": "home card"
+  },
+  "options": {},
+  "attributes": {
+    "cardImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cardTitle": {
+      "type": "string"
+    },
+    "cardDescription": {
+      "type": "text"
+    },
+    "cardSubDescription": {
+      "type": "text"
+    },
+    "cardButton": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.buttons"
+    }
+  }
+}

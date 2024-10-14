@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_home_core_servise_jouneries",
+  "info": {
+    "displayName": "core-servise-jounery"
+  },
+  "options": {},
+  "attributes": {
+    "Color": {
+      "type": "string"
+    },
+    "servicesTitle": {
+      "type": "string"
+    },
+    "servicesSubTitle": {
+      "type": "string"
+    },
+    "servicesNumber": {
+      "type": "integer"
+    },
+    "servicesImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

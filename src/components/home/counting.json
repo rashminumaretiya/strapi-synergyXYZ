@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_countings",
+  "info": {
+    "displayName": "counting"
+  },
+  "options": {},
+  "attributes": {
+    "fieldNumber": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

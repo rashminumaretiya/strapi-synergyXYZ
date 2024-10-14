@@ -1,0 +1,90 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ]
+    },
+    "brandAndMarketing": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.brand"
+    },
+    "counting": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.counting"
+    },
+    "coreServicesJourney": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.core-servise-jounery"
+    },
+    "marketingChallengsTitle": {
+      "type": "string"
+    },
+    "marketingSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.marketing-challange"
+    },
+    "ourApproachTitle": {
+      "type": "string"
+    },
+    "ourApproachDescription": {
+      "type": "text"
+    },
+    "ourApproachButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.buttons"
+    },
+    "transformBrand": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.home-card"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "brandAndMarketingTitle": {
+      "type": "string"
+    },
+    "moreAboutUs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.buttons"
+    }
+  }
+}

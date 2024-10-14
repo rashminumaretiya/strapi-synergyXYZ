@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "website_configurations",
+  "info": {
+    "singularName": "website-configuration",
+    "pluralName": "website-configurations",
+    "displayName": "Website Configuration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "nav": {
+      "type": "component",
+      "repeatable": true,
+      "component": "main.header"
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "main.footer"
+    },
+    "socialMediaLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "social-media-links.social-media-links"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_main_footers",
+  "info": {
+    "displayName": "footer"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "reservedRight": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "whatsAppNumber": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "contactUs": {
+      "type": "string"
+    },
+    "availableTime": {
+      "type": "string"
+    },
+    "availableDays": {
+      "type": "string"
+    },
+    "pageLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.buttons"
+    }
+  }
+}
