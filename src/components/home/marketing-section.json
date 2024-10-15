@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_marketing_sections",
+  "info": {
+    "displayName": "Marketing Section"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "marketingDetails": {
+      "type": "component",
+      "repeatable": true,
+      "component": "our-approach.approach-card"
+    },
+    "maketingInfoButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.buttons"
+    }
+  }
+}

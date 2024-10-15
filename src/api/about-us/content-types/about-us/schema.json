@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "About us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bannerInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.banner"
+    },
+    "video": {
+      "allowedTypes": [
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "visionInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.details-box"
+    },
+    "missionInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.details-box"
+    },
+    "strengthInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.key-strength-section"
+    },
+    "SynergyHeartInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.bubble-section"
+    },
+    "aboutUsInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.collaborative-vision-box"
+    }
+  }
+}

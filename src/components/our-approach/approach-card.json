@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_our_approach_approach_cards",
+  "info": {
+    "displayName": "Approach detail",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "mainCardInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.services-card"
+    }
+  }
+}

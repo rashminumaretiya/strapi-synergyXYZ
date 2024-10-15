@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_services_bubble_process_informations",
+  "info": {
+    "displayName": "Bubble Process Information",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subServicesBubbleDetails": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.services-card"
+    }
+  }
+}

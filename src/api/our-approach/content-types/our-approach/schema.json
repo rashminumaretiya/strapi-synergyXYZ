@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_approaches",
+  "info": {
+    "singularName": "our-approach",
+    "pluralName": "our-approaches",
+    "displayName": "Our Approach",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bannerInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.banner"
+    },
+    "bmapFrameworkInfo": {
+      "displayName": "Approach card",
+      "type": "component",
+      "repeatable": false,
+      "component": "our-approach.approach-card"
+    },
+    "bmapJourneyInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "our-approach.approach-card"
+    },
+    "GrowthPartnerInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.collaborative-vision-box"
+    }
+  }
+}

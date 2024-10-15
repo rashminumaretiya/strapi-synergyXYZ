@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_services_serveice_lists",
+  "info": {
+    "displayName": "serveice list",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "servicesListInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.explore-services-card"
+    }
+  }
+}

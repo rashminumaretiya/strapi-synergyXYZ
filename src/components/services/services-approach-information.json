@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_services_services_approach_informations",
+  "info": {
+    "displayName": "Services Approach Information"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "keyInsights": {
+      "displayName": "Text",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_about_us_key_strength_sections",
+  "info": {
+    "displayName": "Key Strength Section"
+  },
+  "options": {},
+  "attributes": {
+    "keyStrengthTitle": {
+      "type": "string"
+    },
+    "keyStrengthsInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.services-card"
+    }
+  }
+}
