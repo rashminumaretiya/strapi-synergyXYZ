@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_text_sections",
+  "info": {
+    "displayName": "text section"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

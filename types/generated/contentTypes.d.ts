@@ -496,23 +496,63 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    bannerInfo: Schema.Attribute.Component<'shared.banner', false>;
-    video: Schema.Attribute.Media<'files' | 'videos'>;
-    visionInfo: Schema.Attribute.Component<'about-us.details-box', false>;
-    missionInfo: Schema.Attribute.Component<'about-us.details-box', false>;
+    bannerInfo: Schema.Attribute.Component<'shared.banner', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    video: Schema.Attribute.Media<'files' | 'videos'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    visionInfo: Schema.Attribute.Component<'about-us.details-box', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    missionInfo: Schema.Attribute.Component<'about-us.details-box', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     strengthInfo: Schema.Attribute.Component<
       'about-us.key-strength-section',
       false
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SynergyHeartInfo: Schema.Attribute.Component<
       'about-us.bubble-section',
       false
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     aboutUsInfo: Schema.Attribute.Component<
       'about-us.collaborative-vision-box',
       false
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

@@ -1,16 +1,14 @@
 {
   "collectionName": "components_home_marketing_sections",
   "info": {
-    "displayName": "Marketing Section"
+    "displayName": "Marketing Section",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "mainTitle": {
-      "type": "string"
-    },
     "marketingDetails": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "our-approach.approach-card"
     },
     "maketingInfoButton": {

@@ -8,6 +8,17 @@
   "attributes": {
     "keyInsightsTitle": {
       "type": "string"
+    },
+    "keyInsightsCheck": {
+      "type": "boolean"
+    },
+    "keyInsightsList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text-section"
+    },
+    "itemPerRow": {
+      "type": "integer"
     }
   }
 }

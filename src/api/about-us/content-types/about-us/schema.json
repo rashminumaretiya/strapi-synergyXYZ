@@ -10,45 +10,85 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "bannerInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.banner"
+      "component": "shared.banner",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "files",
         "videos"
       ],
-      "type": "media",
-      "multiple": false
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "visionInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "about-us.details-box"
+      "component": "about-us.details-box",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "missionInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "about-us.details-box"
+      "component": "about-us.details-box",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "strengthInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "about-us.key-strength-section"
+      "component": "about-us.key-strength-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "SynergyHeartInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "about-us.bubble-section"
+      "component": "about-us.bubble-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "aboutUsInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "about-us.collaborative-vision-box"
+      "component": "about-us.collaborative-vision-box",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

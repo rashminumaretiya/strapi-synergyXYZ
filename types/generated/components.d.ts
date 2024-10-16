@@ -21,6 +21,19 @@ export interface SharedText extends Struct.ComponentSchema {
   };
   attributes: {
     keyInsightsTitle: Schema.Attribute.String;
+    keyInsightsCheck: Schema.Attribute.Boolean;
+    keyInsightsList: Schema.Attribute.Component<'shared.text-section', true>;
+    itemPerRow: Schema.Attribute.Integer;
+  };
+}
+
+export interface SharedTextSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_text_sections';
+  info: {
+    displayName: 'text section';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
   };
 }
 
@@ -107,11 +120,12 @@ export interface ServicesServicesApproachInformation
   collectionName: 'components_services_services_approach_informations';
   info: {
     displayName: 'Services Approach Information';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    keyInsights: Schema.Attribute.Component<'shared.text', true>;
+    keyInsightsInfo: Schema.Attribute.Component<'shared.text', true>;
   };
 }
 
@@ -224,11 +238,10 @@ export interface MainFooter extends Struct.ComponentSchema {
   collectionName: 'components_main_footers';
   info: {
     displayName: 'footer';
+    description: '';
   };
   attributes: {
-    title: Schema.Attribute.String;
-    reservedRight: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
+    reservedRightText: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     whatsAppNumber: Schema.Attribute.String;
     address: Schema.Attribute.String;
@@ -237,6 +250,7 @@ export interface MainFooter extends Struct.ComponentSchema {
     availableTime: Schema.Attribute.String;
     availableDays: Schema.Attribute.String;
     pageLinks: Schema.Attribute.Component<'shared.buttons', true>;
+    contactUsText: Schema.Attribute.String;
   };
 }
 
@@ -244,12 +258,12 @@ export interface HomeMarketingSection extends Struct.ComponentSchema {
   collectionName: 'components_home_marketing_sections';
   info: {
     displayName: 'Marketing Section';
+    description: '';
   };
   attributes: {
-    mainTitle: Schema.Attribute.String;
     marketingDetails: Schema.Attribute.Component<
       'our-approach.approach-card',
-      true
+      false
     >;
     maketingInfoButton: Schema.Attribute.Component<'shared.buttons', false>;
   };
@@ -312,12 +326,13 @@ export interface HomeCoreServicesSection extends Struct.ComponentSchema {
   collectionName: 'components_home_core_services_sections';
   info: {
     displayName: 'Core Services Section';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
     coreServicesJourneyInfo: Schema.Attribute.Component<
       'home.core-servise-jounery',
-      false
+      true
     >;
   };
 }
@@ -449,6 +464,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'social-media-links.social-media-links': SocialMediaLinksSocialMediaLinks;
       'shared.text': SharedText;
+      'shared.text-section': SharedTextSection;
       'shared.image-title': SharedImageTitle;
       'shared.image-title-section': SharedImageTitleSection;
       'shared.buttons': SharedButtons;

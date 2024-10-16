@@ -1,7 +1,8 @@
 {
   "collectionName": "components_services_services_approach_informations",
   "info": {
-    "displayName": "Services Approach Information"
+    "displayName": "Services Approach Information",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,7 +12,7 @@
     "description": {
       "type": "text"
     },
-    "keyInsights": {
+    "keyInsightsInfo": {
       "displayName": "Text",
       "type": "component",
       "repeatable": true,
