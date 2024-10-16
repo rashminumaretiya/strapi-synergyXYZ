@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "home_pages",
+  "collectionName": "about_uses",
   "info": {
-    "singularName": "home-page",
-    "pluralName": "home-pages",
-    "displayName": "Home page",
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "About us",
     "description": ""
   },
   "options": {
@@ -19,68 +19,71 @@
     "bannerInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "home.banner-content",
+      "component": "shared.banner",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "counting": {
-      "type": "component",
-      "repeatable": true,
-      "component": "home.counting",
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "brandAndMarketingInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "home.marketing-section",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "coreServicesJourneyDetails": {
+    "visionInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "home.core-services-section",
+      "component": "about-us.details-box",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "marketingChallengsDetails": {
+    "missionInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.image-title-section",
+      "component": "about-us.details-box",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "approachDetails": {
+    "strengthInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "home.approach-section",
+      "component": "about-us.key-strength-section",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "brandTransformationInfo": {
-      "displayName": "Brand Transformation Box",
+    "SynergyHeartInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "home.brand-transformation-box",
+      "component": "about-us.bubble-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "aboutUsInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.collaborative-vision-box",
       "pluginOptions": {
         "i18n": {
           "localized": true

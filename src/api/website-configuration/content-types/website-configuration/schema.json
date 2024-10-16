@@ -32,7 +32,7 @@
     },
     "socialMediaLinks": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "social-media-links.social-media-links"
     }
   }

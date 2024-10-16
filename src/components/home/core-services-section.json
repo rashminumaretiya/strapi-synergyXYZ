@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_core_services_sections",
+  "info": {
+    "displayName": "Core Services Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "coreServicesJourneyInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.core-servise-jounery"
+    }
+  }
+}

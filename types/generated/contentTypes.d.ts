@@ -1,89 +1,5 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
-export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
-  collectionName: 'home_pages';
-  info: {
-    singularName: 'home-page';
-    pluralName: 'home-pages';
-    displayName: 'Home page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Schema.Attribute.String;
-    subTitle: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
-    video: Schema.Attribute.Media<'files' | 'videos'>;
-    brandAndMarketing: Schema.Attribute.Component<'home.brand', true>;
-    counting: Schema.Attribute.Component<'home.counting', true>;
-    coreServicesJourney: Schema.Attribute.Component<
-      'home.core-servise-jounery',
-      true
-    >;
-    marketingChallengsTitle: Schema.Attribute.String;
-    marketingSection: Schema.Attribute.Component<
-      'home.marketing-challange',
-      true
-    >;
-    ourApproachTitle: Schema.Attribute.String;
-    ourApproachDescription: Schema.Attribute.Text;
-    ourApproachButton: Schema.Attribute.Component<'shared.buttons', false>;
-    transformBrand: Schema.Attribute.Component<'home.home-card', false>;
-    backgroundImage: Schema.Attribute.Media<'files' | 'images'>;
-    brandAndMarketingTitle: Schema.Attribute.String;
-    moreAboutUs: Schema.Attribute.Component<'shared.buttons', false>;
-    createdAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    publishedAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::home-page.home-page'
-    >;
-  };
-}
-
-export interface ApiWebsiteConfigurationWebsiteConfiguration
-  extends Struct.SingleTypeSchema {
-  collectionName: 'website_configurations';
-  info: {
-    singularName: 'website-configuration';
-    pluralName: 'website-configurations';
-    displayName: 'Website Configuration';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    logo: Schema.Attribute.Media<'images'>;
-    nav: Schema.Attribute.Component<'main.header', true>;
-    footer: Schema.Attribute.Component<'main.footer', false>;
-    socialMediaLinks: Schema.Attribute.Component<
-      'social-media-links.social-media-links',
-      true
-    >;
-    createdAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    publishedAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::website-configuration.website-configuration'
-    >;
-  };
-}
-
 export interface PluginUploadFile extends Struct.CollectionTypeSchema {
   collectionName: 'files';
   info: {
@@ -569,6 +485,462 @@ export interface PluginUsersPermissionsUser
   };
 }
 
+export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
+  collectionName: 'about_uses';
+  info: {
+    singularName: 'about-us';
+    pluralName: 'about-uses';
+    displayName: 'About us';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    bannerInfo: Schema.Attribute.Component<'shared.banner', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    video: Schema.Attribute.Media<'files' | 'videos'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    visionInfo: Schema.Attribute.Component<'about-us.details-box', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    missionInfo: Schema.Attribute.Component<'about-us.details-box', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    strengthInfo: Schema.Attribute.Component<
+      'about-us.key-strength-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    SynergyHeartInfo: Schema.Attribute.Component<
+      'about-us.bubble-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    aboutUsInfo: Schema.Attribute.Component<
+      'about-us.collaborative-vision-box',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-us.about-us'
+    >;
+  };
+}
+
+export interface ApiContactFormContactForm extends Struct.CollectionTypeSchema {
+  collectionName: 'contact_forms';
+  info: {
+    singularName: 'contact-form';
+    pluralName: 'contact-forms';
+    displayName: 'contactForm';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    email: Schema.Attribute.String & Schema.Attribute.Required;
+    phoneNumber: Schema.Attribute.String & Schema.Attribute.Required;
+    budget: Schema.Attribute.Enumeration<
+      [
+        '< RM5,000 to RM10,000',
+        'RM 10,000 to RM 15,000',
+        'RM 15,000 to RM 20,000',
+        '> RM 20,000',
+      ]
+    > &
+      Schema.Attribute.Required;
+    typeOfService: Schema.Attribute.Enumeration<
+      [
+        'Branding',
+        'Creative Content',
+        'Content Strategy',
+        'Media Services',
+        'Commerce & eCommerce',
+        'Customer Relationship Management',
+        'Partnership',
+        'Events & Activations',
+        'Data Analytics',
+        'Tech',
+      ]
+    > &
+      Schema.Attribute.Required;
+    objective: Schema.Attribute.Enumeration<
+      [
+        'Awareness',
+        'Consideration',
+        'Engagement',
+        'Conversion',
+        'Loyalty',
+        'Advocacy',
+      ]
+    >;
+    message: Schema.Attribute.Text & Schema.Attribute.Required;
+    terms: Schema.Attribute.Boolean & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-form.contact-form'
+    >;
+  };
+}
+
+export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
+  collectionName: 'contact_uses';
+  info: {
+    singularName: 'contact-us';
+    pluralName: 'contact-uses';
+    displayName: 'Contact Us';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    backgroundImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-us.contact-us'
+    >;
+  };
+}
+
+export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
+  collectionName: 'home_pages';
+  info: {
+    singularName: 'home-page';
+    pluralName: 'home-pages';
+    displayName: 'Home page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    bannerInfo: Schema.Attribute.Component<'home.banner-content', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    counting: Schema.Attribute.Component<'home.counting', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    brandAndMarketingInfo: Schema.Attribute.Component<
+      'home.marketing-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    coreServicesJourneyDetails: Schema.Attribute.Component<
+      'home.core-services-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    marketingChallengsDetails: Schema.Attribute.Component<
+      'shared.image-title-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    approachDetails: Schema.Attribute.Component<
+      'home.approach-section',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    brandTransformationInfo: Schema.Attribute.Component<
+      'home.brand-transformation-box',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-page.home-page'
+    >;
+  };
+}
+
+export interface ApiOurApproachOurApproach extends Struct.SingleTypeSchema {
+  collectionName: 'our_approaches';
+  info: {
+    singularName: 'our-approach';
+    pluralName: 'our-approaches';
+    displayName: 'Our Approach';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bannerInfo: Schema.Attribute.Component<'shared.banner', false>;
+    bmapFrameworkInfo: Schema.Attribute.Component<
+      'our-approach.approach-card',
+      false
+    >;
+    bmapJourneyInfo: Schema.Attribute.Component<
+      'our-approach.approach-card',
+      false
+    >;
+    GrowthPartnerInfo: Schema.Attribute.Component<
+      'about-us.collaborative-vision-box',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::our-approach.our-approach'
+    >;
+  };
+}
+
+export interface ApiServiceService extends Struct.CollectionTypeSchema {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'service';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bannerInfo: Schema.Attribute.Component<'services.banner-content', false>;
+    subServiceApproachInfo: Schema.Attribute.Component<
+      'services.sub-service-approach-detail',
+      false
+    >;
+    subServicesBubbleProcessInfo: Schema.Attribute.Component<
+      'services.bubble-process-information',
+      true
+    >;
+    workWithUsInfo: Schema.Attribute.Component<
+      'our-approach.approach-card',
+      false
+    >;
+    contentNevigatorcard: Schema.Attribute.Component<
+      'services.content-navigator-card',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service.service'
+    >;
+  };
+}
+
+export interface ApiServicePageServicePage extends Struct.SingleTypeSchema {
+  collectionName: 'service_pages';
+  info: {
+    singularName: 'service-page';
+    pluralName: 'service-pages';
+    displayName: 'service page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bannerInfo: Schema.Attribute.Component<'shared.banner', false>;
+    bmapFrameworkTitle: Schema.Attribute.String;
+    bmapFrameworkInfo: Schema.Attribute.Component<
+      'services.image-title-section',
+      true
+    >;
+    servicesCardInfo: Schema.Attribute.Component<
+      'services.serveice-list',
+      false
+    >;
+    BrandTransformationImage: Schema.Attribute.Media<'images' | 'files'>;
+    BrandTransformationTitle: Schema.Attribute.String;
+    BrandTransformationDescription: Schema.Attribute.Text;
+    BrandTransformationButtons: Schema.Attribute.Component<
+      'shared.buttons',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-page.service-page'
+    >;
+  };
+}
+
+export interface ApiWebsiteConfigurationWebsiteConfiguration
+  extends Struct.SingleTypeSchema {
+  collectionName: 'website_configurations';
+  info: {
+    singularName: 'website-configuration';
+    pluralName: 'website-configurations';
+    displayName: 'Website Configuration';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    logo: Schema.Attribute.Media<'images'>;
+    nav: Schema.Attribute.Component<'main.header', true>;
+    footer: Schema.Attribute.Component<'main.footer', false>;
+    socialMediaLinks: Schema.Attribute.Component<
+      'social-media-links.social-media-links',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::website-configuration.website-configuration'
+    >;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -934,8 +1306,6 @@ export interface AdminTransferTokenPermission
 declare module '@strapi/strapi' {
   export module Public {
     export interface ContentTypeSchemas {
-      'api::home-page.home-page': ApiHomePageHomePage;
-      'api::website-configuration.website-configuration': ApiWebsiteConfigurationWebsiteConfiguration;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
@@ -946,6 +1316,14 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::contact-form.contact-form': ApiContactFormContactForm;
+      'api::contact-us.contact-us': ApiContactUsContactUs;
+      'api::home-page.home-page': ApiHomePageHomePage;
+      'api::our-approach.our-approach': ApiOurApproachOurApproach;
+      'api::service.service': ApiServiceService;
+      'api::service-page.service-page': ApiServicePageServicePage;
+      'api::website-configuration.website-configuration': ApiWebsiteConfigurationWebsiteConfiguration;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;

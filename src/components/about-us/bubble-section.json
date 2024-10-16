@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_about_us_bubble_sections",
+  "info": {
+    "displayName": "Bubble Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "bubbleInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us.details-box"
+    }
+  }
+}

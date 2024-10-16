@@ -1,18 +1,13 @@
 {
   "collectionName": "components_main_footers",
   "info": {
-    "displayName": "footer"
+    "displayName": "footer",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
+    "reservedRightText": {
       "type": "string"
-    },
-    "reservedRight": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
     },
     "phone": {
       "type": "string"
@@ -39,6 +34,9 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.buttons"
+    },
+    "contactUsText": {
+      "type": "string"
     }
   }
 }

@@ -1,30 +1,28 @@
 {
-  "collectionName": "components_home_home_cards",
+  "collectionName": "components_about_us_collaborative_vision_boxes",
   "info": {
-    "displayName": "home card",
-    "description": ""
+    "displayName": "Collaborative Vision Box"
   },
   "options": {},
   "attributes": {
-    "cardImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
+    "image": {
       "allowedTypes": [
         "images",
         "files"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
-    "cardTitle": {
+    "title": {
       "type": "string"
     },
-    "cardDescription": {
+    "description": {
       "type": "text"
     },
-    "cardSubDescription": {
+    "subDescription": {
       "type": "text"
     },
-    "cardButton": {
+    "collaborativeVisionButton": {
       "type": "component",
       "repeatable": true,
       "component": "shared.buttons"
