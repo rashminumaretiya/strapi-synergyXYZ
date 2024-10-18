@@ -1,7 +1,8 @@
 {
   "collectionName": "components_main_headers",
   "info": {
-    "displayName": "Header"
+    "displayName": "Header",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,6 +14,14 @@
     },
     "isBadge": {
       "type": "boolean"
+    },
+    "isBadgeNumber": {
+      "type": "integer"
+    },
+    "subMenu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text-section"
     }
   }
 }

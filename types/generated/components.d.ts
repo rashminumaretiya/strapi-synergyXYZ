@@ -31,9 +31,11 @@ export interface SharedTextSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_text_sections';
   info: {
     displayName: 'text section';
+    description: '';
   };
   attributes: {
     text: Schema.Attribute.String;
+    subMenuSlug: Schema.Attribute.String;
   };
 }
 
@@ -148,10 +150,11 @@ export interface ServicesImageTitleSection extends Struct.ComponentSchema {
   collectionName: 'components_services_image_title_section_s';
   info: {
     displayName: 'Image Title Section ';
+    description: '';
   };
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files'>;
-    Title: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -226,11 +229,14 @@ export interface MainHeader extends Struct.ComponentSchema {
   collectionName: 'components_main_headers';
   info: {
     displayName: 'Header';
+    description: '';
   };
   attributes: {
     name: Schema.Attribute.String;
     slug: Schema.Attribute.String;
     isBadge: Schema.Attribute.Boolean;
+    isBadgeNumber: Schema.Attribute.Integer;
+    subMenu: Schema.Attribute.Component<'shared.text-section', true>;
   };
 }
 
@@ -301,10 +307,12 @@ export interface HomeCounting extends Struct.ComponentSchema {
   collectionName: 'components_home_countings';
   info: {
     displayName: 'counting';
+    description: '';
   };
   attributes: {
     fieldNumber: Schema.Attribute.Integer;
     description: Schema.Attribute.String;
+    isPlusIconVisible: Schema.Attribute.Boolean;
   };
 }
 
@@ -363,6 +371,7 @@ export interface HomeBrandTransformationBox extends Struct.ComponentSchema {
       'shared.buttons',
       false
     >;
+    description1: Schema.Attribute.String;
   };
 }
 
@@ -370,6 +379,7 @@ export interface HomeBannerContent extends Struct.ComponentSchema {
   collectionName: 'components_home_banner_contents';
   info: {
     displayName: 'Banner Content';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
@@ -377,6 +387,7 @@ export interface HomeBannerContent extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     backgroundImage: Schema.Attribute.Media<'images' | 'files'>;
     video: Schema.Attribute.Media<'files' | 'videos'>;
+    title1: Schema.Attribute.String;
   };
 }
 

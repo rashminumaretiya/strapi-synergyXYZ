@@ -1,19 +1,21 @@
 {
   "collectionName": "components_services_image_title_section_s",
   "info": {
-    "displayName": "Image Title Section "
+    "displayName": "Image Title Section ",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "Title": {
+    "title": {
       "type": "string"
     }
   }

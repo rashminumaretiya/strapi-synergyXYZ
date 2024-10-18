@@ -926,6 +926,7 @@ export interface ApiWebsiteConfigurationWebsiteConfiguration
       'social-media-links.social-media-links',
       false
     >;
+    actionButtonTitle: Schema.Attribute.Component<'shared.buttons', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

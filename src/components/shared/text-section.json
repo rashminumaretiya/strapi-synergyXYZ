@@ -1,11 +1,15 @@
 {
   "collectionName": "components_shared_text_sections",
   "info": {
-    "displayName": "text section"
+    "displayName": "text section",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "text": {
+      "type": "string"
+    },
+    "subMenuSlug": {
       "type": "string"
     }
   }
