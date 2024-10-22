@@ -12,12 +12,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "subDescription": {
-      "type": "text"
-    },
     "backgroundImage": {
       "type": "media",
       "multiple": false,
@@ -26,6 +20,9 @@
         "images",
         "files"
       ]
+    },
+    "description": {
+      "type": "blocks"
     }
   }
 }

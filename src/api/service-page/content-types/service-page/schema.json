@@ -42,13 +42,13 @@
     "BrandTransformationTitle": {
       "type": "string"
     },
-    "BrandTransformationDescription": {
-      "type": "text"
-    },
     "BrandTransformationButtons": {
       "type": "component",
       "repeatable": true,
       "component": "shared.buttons"
+    },
+    "BrandTransformationDescription": {
+      "type": "blocks"
     }
   }
 }

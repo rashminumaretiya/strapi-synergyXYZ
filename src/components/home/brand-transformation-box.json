@@ -18,16 +18,13 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "brandTransformationbutton": {
       "type": "component",
       "repeatable": false,
       "component": "shared.buttons"
     },
-    "description1": {
-      "type": "string"
+    "description": {
+      "type": "blocks"
     }
   }
 }

@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "bannerInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "services.banner-content"
-    },
     "subServiceApproachInfo": {
       "type": "component",
       "repeatable": false,
@@ -36,6 +31,15 @@
       "type": "component",
       "repeatable": false,
       "component": "services.content-navigator-card"
+    },
+    "subServicesName": {
+      "type": "string",
+      "required": true
+    },
+    "bannerInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.banner"
     }
   }
 }

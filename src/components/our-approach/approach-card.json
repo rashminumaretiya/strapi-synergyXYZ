@@ -6,13 +6,16 @@
   },
   "options": {},
   "attributes": {
-    "mainTitle": {
-      "type": "string"
-    },
     "mainCardInfo": {
       "type": "component",
       "repeatable": true,
       "component": "services.services-card"
+    },
+    "mainTitle": {
+      "type": "string"
+    },
+    "mainTitles": {
+      "type": "blocks"
     }
   }
 }

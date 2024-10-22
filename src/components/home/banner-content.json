@@ -6,16 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "subTitle": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
-    },
-    "backgroundImage": {
+    "backgroundVideo": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -33,7 +24,13 @@
         "videos"
       ]
     },
-    "title1": {
+    "title": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "subTitle": {
       "type": "string"
     }
   }

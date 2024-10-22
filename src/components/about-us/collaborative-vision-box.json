@@ -1,31 +1,30 @@
 {
   "collectionName": "components_about_us_collaborative_vision_boxes",
   "info": {
-    "displayName": "Collaborative Vision Box"
+    "displayName": "Collaborative Vision Box",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "title": {
       "type": "string"
-    },
-    "description": {
-      "type": "text"
-    },
-    "subDescription": {
-      "type": "text"
     },
     "collaborativeVisionButton": {
       "type": "component",
       "repeatable": true,
       "component": "shared.buttons"
+    },
+    "description": {
+      "type": "blocks"
     }
   }
 }
