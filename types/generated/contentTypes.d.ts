@@ -553,6 +553,15 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    homeCoreService: Schema.Attribute.Component<
+      'home-core-service.home-core-service',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -668,7 +677,7 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    description: Schema.Attribute.Text &
+    description: Schema.Attribute.Blocks &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -763,6 +772,15 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    homeCoreService: Schema.Attribute.Component<
+      'home-core-service.home-core-service',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -830,7 +848,6 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    bannerInfo: Schema.Attribute.Component<'services.banner-content', false>;
     subServiceApproachInfo: Schema.Attribute.Component<
       'services.sub-service-approach-detail',
       false
@@ -847,6 +864,8 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       'services.content-navigator-card',
       false
     >;
+    subServicesName: Schema.Attribute.String & Schema.Attribute.Required;
+    bannerInfo: Schema.Attribute.Component<'shared.banner', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -886,11 +905,11 @@ export interface ApiServicePageServicePage extends Struct.SingleTypeSchema {
     >;
     BrandTransformationImage: Schema.Attribute.Media<'images' | 'files'>;
     BrandTransformationTitle: Schema.Attribute.String;
-    BrandTransformationDescription: Schema.Attribute.Text;
     BrandTransformationButtons: Schema.Attribute.Component<
       'shared.buttons',
       true
     >;
+    BrandTransformationDescription: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -926,6 +945,7 @@ export interface ApiWebsiteConfigurationWebsiteConfiguration
       'social-media-links.social-media-links',
       false
     >;
+    actionButtonTitle: Schema.Attribute.Component<'shared.buttons', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

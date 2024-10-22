@@ -34,6 +34,11 @@
       "type": "component",
       "repeatable": false,
       "component": "social-media-links.social-media-links"
+    },
+    "actionButtonTitle": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.buttons"
     }
   }
 }

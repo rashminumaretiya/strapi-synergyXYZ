@@ -16,7 +16,8 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.banner"
-    },"bmapFrameworkTitle": {
+    },
+    "bmapFrameworkTitle": {
       "type": "string"
     },
     "bmapFrameworkInfo": {
@@ -30,23 +31,24 @@
       "component": "services.serveice-list"
     },
     "BrandTransformationImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "BrandTransformationTitle": {
       "type": "string"
-    },
-    "BrandTransformationDescription": {
-      "type": "text"
     },
     "BrandTransformationButtons": {
       "type": "component",
       "repeatable": true,
       "component": "shared.buttons"
+    },
+    "BrandTransformationDescription": {
+      "type": "blocks"
     }
   }
 }

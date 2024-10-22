@@ -7,23 +7,24 @@
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "title": {
       "type": "string"
-    },
-    "description": {
-      "type": "text"
     },
     "brandTransformationbutton": {
       "type": "component",
       "repeatable": false,
       "component": "shared.buttons"
+    },
+    "description": {
+      "type": "blocks"
     }
   }
 }
