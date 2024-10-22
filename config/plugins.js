@@ -1,7 +1,7 @@
 module.exports = () => ({
-    seo: {
-        enabled: true,
-    },
+    // seo: {
+    //     enabled: true,
+    // },
     upload: {
         config: {
             provider: 'aws-s3',
