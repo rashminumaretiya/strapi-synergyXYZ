@@ -928,6 +928,7 @@ export interface ApiWebsiteConfigurationWebsiteConfiguration
       false
     >;
     actionButtonTitle: Schema.Attribute.Component<'shared.buttons', false>;
+    language: Schema.Attribute.Component<'language-list.language', true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

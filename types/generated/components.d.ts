@@ -267,6 +267,18 @@ export interface MainFooter extends Struct.ComponentSchema {
   };
 }
 
+export interface LanguageListLanguage extends Struct.ComponentSchema {
+  collectionName: 'components_language_list_languages';
+  info: {
+    displayName: 'language';
+    description: '';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
 export interface HomeCoreServiceHomeCoreService extends Struct.ComponentSchema {
   collectionName: 'components_home_core_service_home_core_services';
   info: {
@@ -523,6 +535,7 @@ declare module '@strapi/strapi' {
       'our-approach.approach-card': OurApproachApproachCard;
       'main.header': MainHeader;
       'main.footer': MainFooter;
+      'language-list.language': LanguageListLanguage;
       'home-core-service.home-core-service': HomeCoreServiceHomeCoreService;
       'home-core-service.core-steps': HomeCoreServiceCoreSteps;
       'home.marketing-section': HomeMarketingSection;

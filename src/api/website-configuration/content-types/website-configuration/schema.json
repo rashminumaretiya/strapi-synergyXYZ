@@ -39,6 +39,12 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.buttons"
+    },
+    "language": {
+      "displayName": "language",
+      "type": "component",
+      "repeatable": true,
+      "component": "language-list.language"
     }
   }
 }

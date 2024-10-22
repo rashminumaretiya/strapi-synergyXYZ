@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-10-22T10:35:54.870Z"
+    "x-generation-date": "2024-10-22T14:23:45.428Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -9811,6 +9811,12 @@
               "actionButtonTitle": {
                 "$ref": "#/components/schemas/SharedButtonsComponent"
               },
+              "language": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LanguageListLanguageComponent"
+                }
+              },
               "locale": {
                 "type": "string"
               },
@@ -10489,6 +10495,12 @@
           "actionButtonTitle": {
             "$ref": "#/components/schemas/SharedButtonsComponent"
           },
+          "language": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LanguageListLanguageComponent"
+            }
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -10681,6 +10693,12 @@
                 "actionButtonTitle": {
                   "$ref": "#/components/schemas/SharedButtonsComponent"
                 },
+                "language": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LanguageListLanguageComponent"
+                  }
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -10826,6 +10844,20 @@
             "type": "string"
           },
           "linkedIn": {
+            "type": "string"
+          }
+        }
+      },
+      "LanguageListLanguageComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "label": {
+            "type": "string"
+          },
+          "value": {
             "type": "string"
           }
         }
