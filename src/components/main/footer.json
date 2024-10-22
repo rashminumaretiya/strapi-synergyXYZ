@@ -15,9 +15,6 @@
     "whatsAppNumber": {
       "type": "string"
     },
-    "address": {
-      "type": "string"
-    },
     "email": {
       "type": "string"
     },
@@ -37,6 +34,9 @@
     },
     "contactUsText": {
       "type": "string"
+    },
+    "address": {
+      "type": "blocks"
     }
   }
 }

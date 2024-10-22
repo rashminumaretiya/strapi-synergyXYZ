@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-10-22T05:08:41.567Z"
+    "x-generation-date": "2024-10-22T10:35:54.870Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -4478,9 +4478,6 @@
               "aboutUsInfo": {
                 "$ref": "#/components/schemas/AboutUsCollaborativeVisionBoxComponent"
               },
-              "homeCoreService": {
-                "$ref": "#/components/schemas/HomeCoreServiceHomeCoreServiceComponent"
-              },
               "locale": {
                 "type": "string"
               },
@@ -4693,9 +4690,6 @@
           "aboutUsInfo": {
             "$ref": "#/components/schemas/AboutUsCollaborativeVisionBoxComponent"
           },
-          "homeCoreService": {
-            "$ref": "#/components/schemas/HomeCoreServiceHomeCoreServiceComponent"
-          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -4890,9 +4884,6 @@
                 },
                 "aboutUsInfo": {
                   "$ref": "#/components/schemas/AboutUsCollaborativeVisionBoxComponent"
-                },
-                "homeCoreService": {
-                  "$ref": "#/components/schemas/HomeCoreServiceHomeCoreServiceComponent"
                 },
                 "createdAt": {
                   "type": "string",
@@ -5587,169 +5578,6 @@
             }
           },
           "description": {}
-        }
-      },
-      "HomeCoreServiceCoreStepsComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "fieldNumber": {
-            "type": "integer"
-          },
-          "color": {
-            "type": "string"
-          },
-          "image": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "number"
-              },
-              "documentId": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {},
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number",
-                "format": "float"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {},
-              "related": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "number"
-                    },
-                    "documentId": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "folder": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "number"
-                  },
-                  "documentId": {
-                    "type": "string"
-                  }
-                }
-              },
-              "folderPath": {
-                "type": "string"
-              },
-              "createdAt": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "updatedAt": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "publishedAt": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "createdBy": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "number"
-                  },
-                  "documentId": {
-                    "type": "string"
-                  }
-                }
-              },
-              "updatedBy": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "number"
-                  },
-                  "documentId": {
-                    "type": "string"
-                  }
-                }
-              },
-              "locale": {
-                "type": "string"
-              },
-              "localizations": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "number"
-                    },
-                    "documentId": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "HomeCoreServiceHomeCoreServiceComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "steps": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/HomeCoreServiceCoreStepsComponent"
-            }
-          }
         }
       },
       "ContactFormRequest": {
@@ -7342,12 +7170,6 @@
               "brandTransformationInfo": {
                 "$ref": "#/components/schemas/HomeBrandTransformationBoxComponent"
               },
-              "homeCoreService": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/HomeCoreServiceHomeCoreServiceComponent"
-                }
-              },
               "locale": {
                 "type": "string"
               },
@@ -7437,12 +7259,6 @@
           "brandTransformationInfo": {
             "$ref": "#/components/schemas/HomeBrandTransformationBoxComponent"
           },
-          "homeCoreService": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/HomeCoreServiceHomeCoreServiceComponent"
-            }
-          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -7514,12 +7330,6 @@
                 },
                 "brandTransformationInfo": {
                   "$ref": "#/components/schemas/HomeBrandTransformationBoxComponent"
-                },
-                "homeCoreService": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/HomeCoreServiceHomeCoreServiceComponent"
-                  }
                 },
                 "createdAt": {
                   "type": "string",
@@ -7908,25 +7718,25 @@
           }
         }
       },
-      "HomeCoreServiseJouneryComponent": {
+      "HomeCoreServiceCoreStepsComponent": {
         "type": "object",
         "properties": {
           "id": {
             "type": "number"
           },
-          "Color": {
+          "title": {
             "type": "string"
           },
-          "servicesTitle": {
+          "description": {
             "type": "string"
           },
-          "servicesSubTitle": {
-            "type": "string"
-          },
-          "servicesNumber": {
+          "fieldNumber": {
             "type": "integer"
           },
-          "servicesImage": {
+          "color": {
+            "type": "string"
+          },
+          "image": {
             "type": "object",
             "properties": {
               "id": {
@@ -8057,21 +7867,33 @@
           }
         }
       },
+      "HomeCoreServiceHomeCoreServiceComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HomeCoreServiceCoreStepsComponent"
+            }
+          }
+        }
+      },
       "HomeCoreServicesSectionComponent": {
         "type": "object",
         "properties": {
           "id": {
             "type": "number"
           },
-          "title": {
-            "type": "string"
-          },
-          "coreServicesJourneyInfo": {
+          "homeCoreService": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/HomeCoreServiseJouneryComponent"
+              "$ref": "#/components/schemas/HomeCoreServiceHomeCoreServiceComponent"
             }
-          }
+          },
+          "title": {}
         }
       },
       "SharedImageTitleComponent": {
@@ -10967,9 +10789,6 @@
           "whatsAppNumber": {
             "type": "string"
           },
-          "address": {
-            "type": "string"
-          },
           "email": {
             "type": "string"
           },
@@ -10990,7 +10809,8 @@
           },
           "contactUsText": {
             "type": "string"
-          }
+          },
+          "address": {}
         }
       },
       "SocialMediaLinksSocialMediaLinksComponent": {

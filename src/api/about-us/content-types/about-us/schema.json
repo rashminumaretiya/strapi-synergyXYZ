@@ -89,17 +89,6 @@
           "localized": true
         }
       }
-    },
-    "homeCoreService": {
-      "displayName": "homeCoreService",
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "home-core-service.home-core-service"
     }
   }
 }

@@ -6,13 +6,13 @@
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "coreServicesJourneyInfo": {
+    "homeCoreService": {
       "type": "component",
       "repeatable": true,
-      "component": "home.core-servise-jounery"
+      "component": "home-core-service.home-core-service"
+    },
+    "title": {
+      "type": "blocks"
     }
   }
 }

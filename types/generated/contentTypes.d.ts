@@ -553,15 +553,6 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    homeCoreService: Schema.Attribute.Component<
-      'home-core-service.home-core-service',
-      false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -766,15 +757,6 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     brandTransformationInfo: Schema.Attribute.Component<
       'home.brand-transformation-box',
       false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    homeCoreService: Schema.Attribute.Component<
-      'home-core-service.home-core-service',
-      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
