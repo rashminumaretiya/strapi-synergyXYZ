@@ -18,9 +18,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "content": {
       "type": "blocks"
     }

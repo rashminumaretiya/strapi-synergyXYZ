@@ -11,9 +11,6 @@
       "repeatable": true,
       "component": "services.services-card"
     },
-    "mainTitle": {
-      "type": "string"
-    },
     "mainTitles": {
       "type": "blocks"
     }

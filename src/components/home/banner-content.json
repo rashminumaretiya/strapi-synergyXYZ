@@ -11,8 +11,8 @@
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files"
+        "files",
+        "videos"
       ]
     },
     "video": {

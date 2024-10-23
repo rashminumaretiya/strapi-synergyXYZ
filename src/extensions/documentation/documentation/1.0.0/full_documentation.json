@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-10-23T12:56:35.444Z"
+    "x-generation-date": "2024-10-23T13:28:40.248Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -5248,9 +5248,6 @@
           "title": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
           "content": {}
         }
       },
@@ -7698,9 +7695,6 @@
             "items": {
               "$ref": "#/components/schemas/ServicesServicesCardComponent"
             }
-          },
-          "mainTitle": {
-            "type": "string"
           },
           "mainTitles": {}
         }
