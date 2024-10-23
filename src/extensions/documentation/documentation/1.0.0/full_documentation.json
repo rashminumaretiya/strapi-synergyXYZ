@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-10-22T14:23:45.428Z"
+    "x-generation-date": "2024-10-23T08:59:55.854Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -8926,15 +8926,13 @@
               }
             }
           },
-          "title": {
-            "type": "string"
-          },
           "buttons": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SharedButtonsComponent"
             }
-          }
+          },
+          "titleWithDescription": {}
         }
       },
       "ServicePageRequest": {

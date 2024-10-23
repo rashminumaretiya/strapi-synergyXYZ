@@ -182,11 +182,12 @@ export interface ServicesContentNavigatorCard extends Struct.ComponentSchema {
   collectionName: 'components_services_content_navigator_cards';
   info: {
     displayName: 'Content Navigator Card';
+    description: '';
   };
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files'>;
-    title: Schema.Attribute.String;
     buttons: Schema.Attribute.Component<'shared.buttons', true>;
+    titleWithDescription: Schema.Attribute.Blocks;
   };
 }
 
