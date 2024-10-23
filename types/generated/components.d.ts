@@ -108,11 +108,13 @@ export interface ServicesServicesCard extends Struct.ComponentSchema {
   collectionName: 'components_services_services_cards';
   info: {
     displayName: 'Services Card';
+    description: '';
   };
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files'>;
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+    content: Schema.Attribute.Blocks;
   };
 }
 
@@ -447,17 +449,6 @@ export interface HomeApproachSection extends Struct.ComponentSchema {
   };
 }
 
-export interface BubblesApproachBubbles extends Struct.ComponentSchema {
-  collectionName: 'components_bubbles_approach_bubbles';
-  info: {
-    displayName: 'approach-bubbles';
-  };
-  attributes: {
-    title: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
-  };
-}
-
 export interface AboutUsKeyStrengthSection extends Struct.ComponentSchema {
   collectionName: 'components_about_us_key_strength_sections';
   info: {
@@ -514,6 +505,17 @@ export interface AboutUsBubbleSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BubblesApproachBubbles extends Struct.ComponentSchema {
+  collectionName: 'components_bubbles_approach_bubbles';
+  info: {
+    displayName: 'approach-bubbles';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -549,11 +551,11 @@ declare module '@strapi/strapi' {
       'home.brand-transformation-box': HomeBrandTransformationBox;
       'home.banner-content': HomeBannerContent;
       'home.approach-section': HomeApproachSection;
-      'bubbles.approach-bubbles': BubblesApproachBubbles;
       'about-us.key-strength-section': AboutUsKeyStrengthSection;
       'about-us.details-box': AboutUsDetailsBox;
       'about-us.collaborative-vision-box': AboutUsCollaborativeVisionBox;
       'about-us.bubble-section': AboutUsBubbleSection;
+      'bubbles.approach-bubbles': BubblesApproachBubbles;
     }
   }
 }
