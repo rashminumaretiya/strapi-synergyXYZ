@@ -836,7 +836,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     >;
     subServicesBubbleProcessInfo: Schema.Attribute.Component<
       'services.bubble-process-information',
-      true
+      false
     >;
     workWithUsInfo: Schema.Attribute.Component<
       'our-approach.approach-card',
