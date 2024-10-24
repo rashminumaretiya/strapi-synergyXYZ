@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-10-23T13:28:40.248Z"
+    "x-generation-date": "2024-10-24T09:56:00.049Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -8450,10 +8450,7 @@
                 "$ref": "#/components/schemas/ServicesSubServiceApproachDetailComponent"
               },
               "subServicesBubbleProcessInfo": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ServicesBubbleProcessInformationComponent"
-                }
+                "$ref": "#/components/schemas/ServicesBubbleProcessInformationComponent"
               },
               "workWithUsInfo": {
                 "$ref": "#/components/schemas/OurApproachApproachCardComponent"
@@ -8539,10 +8536,7 @@
             "$ref": "#/components/schemas/ServicesSubServiceApproachDetailComponent"
           },
           "subServicesBubbleProcessInfo": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ServicesBubbleProcessInformationComponent"
-            }
+            "$ref": "#/components/schemas/ServicesBubbleProcessInformationComponent"
           },
           "workWithUsInfo": {
             "$ref": "#/components/schemas/OurApproachApproachCardComponent"
@@ -8608,10 +8602,7 @@
                   "$ref": "#/components/schemas/ServicesSubServiceApproachDetailComponent"
                 },
                 "subServicesBubbleProcessInfo": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ServicesBubbleProcessInformationComponent"
-                  }
+                  "$ref": "#/components/schemas/ServicesBubbleProcessInformationComponent"
                 },
                 "workWithUsInfo": {
                   "$ref": "#/components/schemas/OurApproachApproachCardComponent"
@@ -8783,7 +8774,8 @@
             "items": {
               "$ref": "#/components/schemas/ServicesServicesCardComponent"
             }
-          }
+          },
+          "mainTitles": {}
         }
       },
       "ServicesContentNavigatorCardComponent": {
