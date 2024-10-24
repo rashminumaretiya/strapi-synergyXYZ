@@ -1,8 +1,7 @@
 {
   "collectionName": "components_home_countings",
   "info": {
-    "displayName": "counting",
-    "description": ""
+    "displayName": "counting"
   },
   "options": {},
   "attributes": {
@@ -11,9 +10,6 @@
     },
     "description": {
       "type": "string"
-    },
-    "isPlusIconVisible": {
-      "type": "boolean"
     }
   }
 }

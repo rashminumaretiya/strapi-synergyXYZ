@@ -10,82 +10,81 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
-    "bannerInfo": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ]
+    },
+    "brandAndMarketing": {
       "type": "component",
-      "repeatable": false,
-      "component": "home.banner-content",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "repeatable": true,
+      "component": "home.brand"
     },
     "counting": {
       "type": "component",
       "repeatable": true,
-      "component": "home.counting",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "component": "home.counting"
     },
-    "brandAndMarketingInfo": {
+    "coreServicesJourney": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.core-servise-jounery"
+    },
+    "marketingChallengsTitle": {
+      "type": "string"
+    },
+    "marketingSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.marketing-challange"
+    },
+    "ourApproachTitle": {
+      "type": "string"
+    },
+    "ourApproachDescription": {
+      "type": "text"
+    },
+    "ourApproachButton": {
       "type": "component",
       "repeatable": false,
-      "component": "home.marketing-section",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "component": "shared.buttons"
     },
-    "coreServicesJourneyDetails": {
+    "transformBrand": {
       "type": "component",
       "repeatable": false,
-      "component": "home.core-services-section",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "component": "home.home-card"
     },
-    "marketingChallengsDetails": {
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "brandAndMarketingTitle": {
+      "type": "string"
+    },
+    "moreAboutUs": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.image-title-section",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "approachDetails": {
-      "type": "component",
-      "repeatable": false,
-      "component": "home.approach-section",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "brandTransformationInfo": {
-      "displayName": "Brand Transformation Box",
-      "type": "component",
-      "repeatable": false,
-      "component": "home.brand-transformation-box",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "component": "shared.buttons"
     }
   }
 }

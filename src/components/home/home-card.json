@@ -1,19 +1,17 @@
 {
   "collectionName": "components_home_home_cards",
   "info": {
-    "displayName": "home card",
-    "description": ""
+    "displayName": "home card"
   },
   "options": {},
   "attributes": {
     "cardImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
     "cardTitle": {
       "type": "string"
