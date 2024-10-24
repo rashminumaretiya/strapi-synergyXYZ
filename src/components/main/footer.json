@@ -1,26 +1,18 @@
 {
   "collectionName": "components_main_footers",
   "info": {
-    "displayName": "footer"
+    "displayName": "footer",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
+    "reservedRightText": {
       "type": "string"
-    },
-    "reservedRight": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
     },
     "phone": {
       "type": "string"
     },
     "whatsAppNumber": {
-      "type": "string"
-    },
-    "address": {
       "type": "string"
     },
     "email": {
@@ -39,6 +31,12 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.buttons"
+    },
+    "contactUsText": {
+      "type": "string"
+    },
+    "address": {
+      "type": "blocks"
     }
   }
 }

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_services_content_navigator_cards",
+  "info": {
+    "displayName": "Content Navigator Card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.buttons"
+    },
+    "titleWithDescription": {
+      "type": "blocks"
+    }
+  }
+}

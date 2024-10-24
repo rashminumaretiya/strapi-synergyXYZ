@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_home_brand_transformation_boxes",
+  "info": {
+    "displayName": "Brand Transformation Box",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "brandTransformationbutton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.buttons"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

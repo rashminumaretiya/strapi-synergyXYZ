@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_image_title_sections",
+  "info": {
+    "displayName": "image title section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "imageTitleInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.image-title"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_approach_sections",
+  "info": {
+    "displayName": "approach section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "approchButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.buttons"
+    }
+  }
+}

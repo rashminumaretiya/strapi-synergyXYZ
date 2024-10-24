@@ -1,5 +1,67 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface SocialMediaLinksSocialMediaLinks
+  extends Struct.ComponentSchema {
+  collectionName: 'components_social_media_links_social_media_links';
+  info: {
+    displayName: 'Social Media Links';
+  };
+  attributes: {
+    facebook: Schema.Attribute.String;
+    instagram: Schema.Attribute.String;
+    linkedIn: Schema.Attribute.String;
+  };
+}
+
+export interface SharedText extends Struct.ComponentSchema {
+  collectionName: 'components_shared_texts';
+  info: {
+    displayName: 'Text';
+    description: '';
+  };
+  attributes: {
+    keyInsightsTitle: Schema.Attribute.String;
+    keyInsightsCheck: Schema.Attribute.Boolean;
+    keyInsightsList: Schema.Attribute.Component<'shared.text-section', true>;
+    itemPerRow: Schema.Attribute.Integer;
+  };
+}
+
+export interface SharedTextSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_text_sections';
+  info: {
+    displayName: 'text section';
+    description: '';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+    subMenuSlug: Schema.Attribute.String;
+  };
+}
+
+export interface SharedImageTitle extends Struct.ComponentSchema {
+  collectionName: 'components_shared_image_titles';
+  info: {
+    displayName: 'image Title';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedImageTitleSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_image_title_sections';
+  info: {
+    displayName: 'image title section';
+    description: '';
+  };
+  attributes: {
+    mainTitle: Schema.Attribute.String;
+    imageTitleInfo: Schema.Attribute.Component<'shared.image-title', true>;
+  };
+}
+
 export interface SharedButtons extends Struct.ComponentSchema {
   collectionName: 'components_shared_buttons';
   info: {
@@ -12,15 +74,190 @@ export interface SharedButtons extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBanner extends Struct.ComponentSchema {
+  collectionName: 'components_shared_banners';
+  info: {
+    displayName: 'Banner';
+    description: '';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    backgroundImage: Schema.Attribute.Media<'images' | 'files'>;
+    description: Schema.Attribute.Blocks;
+  };
+}
+
+export interface ServicesSubServiceApproachDetail
+  extends Struct.ComponentSchema {
+  collectionName: 'components_services_sub_service_approach_details';
+  info: {
+    displayName: 'Sub Service Approach Detail';
+    description: '';
+  };
+  attributes: {
+    mainTitle: Schema.Attribute.String;
+    subServiceApproachInfo: Schema.Attribute.Component<
+      'services.services-approach-information',
+      true
+    >;
+  };
+}
+
+export interface ServicesServicesCard extends Struct.ComponentSchema {
+  collectionName: 'components_services_services_cards';
+  info: {
+    displayName: 'Services Card';
+    description: '';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    title: Schema.Attribute.String;
+    content: Schema.Attribute.Blocks;
+  };
+}
+
+export interface ServicesServicesApproachInformation
+  extends Struct.ComponentSchema {
+  collectionName: 'components_services_services_approach_informations';
+  info: {
+    displayName: 'Services Approach Information';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    keyInsightsInfo: Schema.Attribute.Component<'shared.text', true>;
+    itemPerRow: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+        },
+        number
+      >;
+  };
+}
+
+export interface ServicesServeiceList extends Struct.ComponentSchema {
+  collectionName: 'components_services_serveice_lists';
+  info: {
+    displayName: 'serveice list';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    servicesListInfo: Schema.Attribute.Component<
+      'services.explore-services-card',
+      true
+    >;
+  };
+}
+
+export interface ServicesImageTitleSection extends Struct.ComponentSchema {
+  collectionName: 'components_services_image_title_section_s';
+  info: {
+    displayName: 'Image Title Section ';
+    description: '';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ServicesExploreServicesCard extends Struct.ComponentSchema {
+  collectionName: 'components_services_explore_services_cards';
+  info: {
+    displayName: 'Explore Services Card';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    color: Schema.Attribute.String;
+    slug: Schema.Attribute.String;
+  };
+}
+
+export interface ServicesContentNavigatorCard extends Struct.ComponentSchema {
+  collectionName: 'components_services_content_navigator_cards';
+  info: {
+    displayName: 'Content Navigator Card';
+    description: '';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    buttons: Schema.Attribute.Component<'shared.buttons', true>;
+    titleWithDescription: Schema.Attribute.Blocks;
+  };
+}
+
+export interface ServicesBubbleProcessInformation
+  extends Struct.ComponentSchema {
+  collectionName: 'components_services_bubble_process_informations';
+  info: {
+    displayName: 'Bubble Process Information';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    subServicesBubbleDetails: Schema.Attribute.Component<
+      'services.services-card',
+      true
+    >;
+    mainTitles: Schema.Attribute.Blocks;
+  };
+}
+
+export interface ServicesBannerContent extends Struct.ComponentSchema {
+  collectionName: 'components_services_banner_contents';
+  info: {
+    displayName: 'Banner Content';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
+export interface OurApproachApproachCard extends Struct.ComponentSchema {
+  collectionName: 'components_our_approach_approach_cards';
+  info: {
+    displayName: 'Approach detail';
+    description: '';
+  };
+  attributes: {
+    mainCardInfo: Schema.Attribute.Component<'services.services-card', true>;
+    mainTitles: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LanguageListLanguage extends Struct.ComponentSchema {
+  collectionName: 'components_language_list_languages';
+  info: {
+    displayName: 'language';
+    description: '';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
 export interface MainHeader extends Struct.ComponentSchema {
   collectionName: 'components_main_headers';
   info: {
     displayName: 'Header';
+    description: '';
   };
   attributes: {
     name: Schema.Attribute.String;
     slug: Schema.Attribute.String;
     isBadge: Schema.Attribute.Boolean;
+    isBadgeNumber: Schema.Attribute.Integer;
+    subMenu: Schema.Attribute.Component<'shared.text-section', true>;
   };
 }
 
@@ -28,19 +265,60 @@ export interface MainFooter extends Struct.ComponentSchema {
   collectionName: 'components_main_footers';
   info: {
     displayName: 'footer';
+    description: '';
   };
   attributes: {
-    title: Schema.Attribute.String;
-    reservedRight: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
+    reservedRightText: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     whatsAppNumber: Schema.Attribute.String;
-    address: Schema.Attribute.String;
     email: Schema.Attribute.String;
     contactUs: Schema.Attribute.String;
     availableTime: Schema.Attribute.String;
     availableDays: Schema.Attribute.String;
     pageLinks: Schema.Attribute.Component<'shared.buttons', true>;
+    contactUsText: Schema.Attribute.String;
+    address: Schema.Attribute.Blocks;
+  };
+}
+
+export interface HomeCoreServiceHomeCoreService extends Struct.ComponentSchema {
+  collectionName: 'components_home_core_service_home_core_services';
+  info: {
+    displayName: 'homeCoreService';
+    description: '';
+  };
+  attributes: {
+    steps: Schema.Attribute.Component<'home-core-service.core-steps', true>;
+  };
+}
+
+export interface HomeCoreServiceCoreSteps extends Struct.ComponentSchema {
+  collectionName: 'components_home_core_service_core_steps';
+  info: {
+    displayName: 'core steps';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    fieldNumber: Schema.Attribute.Integer;
+    color: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface HomeMarketingSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_marketing_sections';
+  info: {
+    displayName: 'Marketing Section';
+    description: '';
+  };
+  attributes: {
+    marketingDetails: Schema.Attribute.Component<
+      'our-approach.approach-card',
+      false
+    >;
+    maketingInfoButton: Schema.Attribute.Component<'shared.buttons', false>;
   };
 }
 
@@ -61,6 +339,7 @@ export interface HomeHomeCard extends Struct.ComponentSchema {
   collectionName: 'components_home_home_cards';
   info: {
     displayName: 'home card';
+    description: '';
   };
   attributes: {
     cardImage: Schema.Attribute.Media<'images' | 'files'>;
@@ -75,10 +354,12 @@ export interface HomeCounting extends Struct.ComponentSchema {
   collectionName: 'components_home_countings';
   info: {
     displayName: 'counting';
+    description: '';
   };
   attributes: {
     fieldNumber: Schema.Attribute.Integer;
     description: Schema.Attribute.String;
+    isPlusIconVisible: Schema.Attribute.Boolean;
   };
 }
 
@@ -96,6 +377,21 @@ export interface HomeCoreServiseJounery extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeCoreServicesSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_core_services_sections';
+  info: {
+    displayName: 'Core Services Section';
+    description: '';
+  };
+  attributes: {
+    homeCoreService: Schema.Attribute.Component<
+      'home-core-service.home-core-service',
+      true
+    >;
+    title: Schema.Attribute.Blocks;
+  };
+}
+
 export interface HomeBrand extends Struct.ComponentSchema {
   collectionName: 'components_home_brands';
   info: {
@@ -108,31 +404,157 @@ export interface HomeBrand extends Struct.ComponentSchema {
   };
 }
 
-export interface SocialMediaLinksSocialMediaLinks
-  extends Struct.ComponentSchema {
-  collectionName: 'components_social_media_links_social_media_links';
+export interface HomeBrandTransformationBox extends Struct.ComponentSchema {
+  collectionName: 'components_home_brand_transformation_boxes';
   info: {
-    displayName: 'Social Media Links';
+    displayName: 'Brand Transformation Box';
+    description: '';
   };
   attributes: {
-    facebook: Schema.Attribute.String;
-    instagram: Schema.Attribute.String;
-    linkedIn: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    title: Schema.Attribute.String;
+    brandTransformationbutton: Schema.Attribute.Component<
+      'shared.buttons',
+      false
+    >;
+    description: Schema.Attribute.Blocks;
+  };
+}
+
+export interface HomeBannerContent extends Struct.ComponentSchema {
+  collectionName: 'components_home_banner_contents';
+  info: {
+    displayName: 'Banner Content';
+    description: '';
+  };
+  attributes: {
+    backgroundVideo: Schema.Attribute.Media<'files' | 'videos'>;
+    video: Schema.Attribute.Media<'files' | 'videos'>;
+    title: Schema.Attribute.Blocks;
+    description: Schema.Attribute.Blocks;
+    subTitle: Schema.Attribute.String;
+  };
+}
+
+export interface HomeApproachSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_approach_sections';
+  info: {
+    displayName: 'approach section';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    approchButton: Schema.Attribute.Component<'shared.buttons', false>;
+  };
+}
+
+export interface BubblesApproachBubbles extends Struct.ComponentSchema {
+  collectionName: 'components_bubbles_approach_bubbles';
+  info: {
+    displayName: 'approach-bubbles';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+  };
+}
+
+export interface AboutUsKeyStrengthSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_key_strength_sections';
+  info: {
+    displayName: 'Key Strength Section';
+  };
+  attributes: {
+    keyStrengthTitle: Schema.Attribute.String;
+    keyStrengthsInfo: Schema.Attribute.Component<
+      'services.services-card',
+      true
+    >;
+  };
+}
+
+export interface AboutUsDetailsBox extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_details_boxes';
+  info: {
+    displayName: 'Details Box';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+  };
+}
+
+export interface AboutUsCollaborativeVisionBox extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_collaborative_vision_boxes';
+  info: {
+    displayName: 'Collaborative Vision Box';
+    description: '';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    title: Schema.Attribute.String;
+    collaborativeVisionButton: Schema.Attribute.Component<
+      'shared.buttons',
+      true
+    >;
+    description: Schema.Attribute.Blocks;
+  };
+}
+
+export interface AboutUsBubbleSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_bubble_sections';
+  info: {
+    displayName: 'Bubble Section';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    subTitle: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    bubbleInfo: Schema.Attribute.Component<'about-us.details-box', true>;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'social-media-links.social-media-links': SocialMediaLinksSocialMediaLinks;
+      'shared.text': SharedText;
+      'shared.text-section': SharedTextSection;
+      'shared.image-title': SharedImageTitle;
+      'shared.image-title-section': SharedImageTitleSection;
       'shared.buttons': SharedButtons;
+      'shared.banner': SharedBanner;
+      'services.sub-service-approach-detail': ServicesSubServiceApproachDetail;
+      'services.services-card': ServicesServicesCard;
+      'services.services-approach-information': ServicesServicesApproachInformation;
+      'services.serveice-list': ServicesServeiceList;
+      'services.image-title-section': ServicesImageTitleSection;
+      'services.explore-services-card': ServicesExploreServicesCard;
+      'services.content-navigator-card': ServicesContentNavigatorCard;
+      'services.bubble-process-information': ServicesBubbleProcessInformation;
+      'services.banner-content': ServicesBannerContent;
+      'our-approach.approach-card': OurApproachApproachCard;
+      'language-list.language': LanguageListLanguage;
       'main.header': MainHeader;
       'main.footer': MainFooter;
+      'home-core-service.home-core-service': HomeCoreServiceHomeCoreService;
+      'home-core-service.core-steps': HomeCoreServiceCoreSteps;
+      'home.marketing-section': HomeMarketingSection;
       'home.marketing-challange': HomeMarketingChallange;
       'home.home-card': HomeHomeCard;
       'home.counting': HomeCounting;
       'home.core-servise-jounery': HomeCoreServiseJounery;
+      'home.core-services-section': HomeCoreServicesSection;
       'home.brand': HomeBrand;
-      'social-media-links.social-media-links': SocialMediaLinksSocialMediaLinks;
+      'home.brand-transformation-box': HomeBrandTransformationBox;
+      'home.banner-content': HomeBannerContent;
+      'home.approach-section': HomeApproachSection;
+      'bubbles.approach-bubbles': BubblesApproachBubbles;
+      'about-us.key-strength-section': AboutUsKeyStrengthSection;
+      'about-us.details-box': AboutUsDetailsBox;
+      'about-us.collaborative-vision-box': AboutUsCollaborativeVisionBox;
+      'about-us.bubble-section': AboutUsBubbleSection;
     }
   }
 }
