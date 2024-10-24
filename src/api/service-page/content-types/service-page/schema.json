@@ -10,25 +10,49 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "bannerInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.banner"
+      "component": "shared.banner",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "bmapFrameworkTitle": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "bmapFrameworkInfo": {
       "type": "component",
       "repeatable": true,
-      "component": "services.image-title-section"
+      "component": "services.image-title-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "servicesCardInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "services.serveice-list"
+      "component": "services.serveice-list",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "BrandTransformationImage": {
       "type": "media",
@@ -37,18 +61,38 @@
       "allowedTypes": [
         "images",
         "files"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "BrandTransformationTitle": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "BrandTransformationButtons": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.buttons"
+      "component": "shared.buttons",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "BrandTransformationDescription": {
-      "type": "blocks"
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

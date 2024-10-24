@@ -10,36 +10,70 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "subServiceApproachInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "services.sub-service-approach-detail"
+      "component": "services.sub-service-approach-detail",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "subServicesBubbleProcessInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "services.bubble-process-information"
+      "component": "services.bubble-process-information",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "workWithUsInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "our-approach.approach-card"
+      "component": "our-approach.approach-card",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "contentNevigatorcard": {
       "type": "component",
       "repeatable": false,
-      "component": "services.content-navigator-card"
+      "component": "services.content-navigator-card",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "subServicesName": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "bannerInfo": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.banner"
+      "component": "shared.banner",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
